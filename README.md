@@ -69,14 +69,13 @@ To develop a highly accurate and efficient deep learning model using **Efficient
 
 ---
 
-## 📈 Evaluation Metrics
+## 📈 Evaluation Metrics (To be Updated)
 
-- ✅ **Training Accuracy:** 99.08%
-- ✅ **Validation Accuracy:** 96.00%
-- ✅ **Test Accuracy:** 96.00%
-- ✅ **Test Loss:** 0.1073
-- ✅ **F1 Scores:** 0.92 to 1.00 across all classes
-- ✅ Balanced class-wise support ensures fair performance evaluation
+- ✅ **Training Accuracy:** 
+- ✅ **Validation Accuracy:** 
+- ✅ **Test Accuracy:** 
+- ✅ **Test Loss:** 
+- ✅ **F1 Scores:** 
 
 ---
 
@@ -102,7 +101,7 @@ This project demonstrates the power of **Transfer Learning with EfficientNetV2B0
 
 ## 👨‍🔬 Contributors
 
-- 👤 Your Name
+- 👤 Ameya Atreya
 - 📫 Feel free to reach out for collaboration or feedback.
 
 ---
