@@ -103,6 +103,7 @@ This project demonstrates the power of **Transfer Learning with EfficientNetV2B0
 
 - 👤 Ameya Atreya
 - 📫 Feel free to reach out for collaboration or feedback.
+- 🔗 [LinkedIn](https://www.linkedin.com/in/ameya-atreya/)
 
 ---
 
