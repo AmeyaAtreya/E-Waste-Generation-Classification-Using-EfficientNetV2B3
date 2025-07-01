@@ -48,7 +48,7 @@ To develop a highly accurate and efficient deep learning model using **Efficient
 ## 🛠️ Preprocessing Steps
 
 - Image resizing (128×128) and rescaling
-- Data augmentation (flip, rotate, zoom)
+- Data augmentation (flip, rotate, zoom, contrast, translation, brightness)
 - Normalization with `preprocess_input` for EfficientNetV2B0 compatibility
 
 ---
@@ -69,13 +69,13 @@ To develop a highly accurate and efficient deep learning model using **Efficient
 
 ---
 
-## 📈 Evaluation Metrics (To be Updated)
+## 📈 Evaluation Metrics 
 
-- ✅ **Training Accuracy:** 
-- ✅ **Validation Accuracy:** 
-- ✅ **Test Accuracy:** 
-- ✅ **Test Loss:** 
-- ✅ **F1 Scores:** 
+- ✅ **Training Accuracy:** 0.9849
+- ✅ **Validation Accuracy:** 0.97
+- ✅ **Test Accuracy:** 0.97
+- ✅ **Test Loss:** 0.1008
+- ✅ **F1 Scores:** 0.97
 
 ---
 
