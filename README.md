@@ -1,14 +1,14 @@
-# 🔌 E-Waste Image Classification Using EfficientNetV2B0 (Transfer Learning)
+# 🔌 E-Waste Image Classification Using EfficientNetV2B3 (Transfer Learning)
 
 ## 🧠 Project Overview
 
-Electronic waste (e-waste) is an escalating global issue due to its hazardous and non-biodegradable nature. Manual classification is inefficient and error-prone. This project automates the classification of e-waste images using **Transfer Learning with EfficientNetV2B0**, a state-of-the-art convolutional neural network, to support faster and more accurate sorting for sustainable recycling.
+Electronic waste (e-waste) is an escalating global issue due to its hazardous and non-biodegradable nature. Manual classification is inefficient and error-prone. This project automates the classification of e-waste images using **Transfer Learning with EfficientNetV2B3**, a state-of-the-art convolutional neural network, to support faster and more accurate sorting for sustainable recycling.
 
 ---
 
 ## 🎯 Aim
 
-To develop a highly accurate and efficient deep learning model using **EfficientNetV2B0** to classify electronic waste images into 10 predefined categories. The project promotes sustainable e-waste management and encourages circular economy practices.
+To develop a highly accurate and efficient deep learning model using **EfficientNetV2B3** to classify electronic waste images into 10 predefined categories. The project promotes sustainable e-waste management and encourages circular economy practices.
 
 ---
 
@@ -47,34 +47,36 @@ To develop a highly accurate and efficient deep learning model using **Efficient
 
 ## 🛠️ Preprocessing Steps
 
-- Image resizing (128×128) and rescaling
+- Image resizing (224×224) and rescaling
 - Data augmentation (flip, rotate, zoom, contrast, translation, brightness)
-- Normalization with `preprocess_input` for EfficientNetV2B0 compatibility
+- Normalization with `preprocess_input` for EfficientNetV2B3 compatibility
 
 ---
 
 ## 🏗️ Model Architecture
 
-- **Base:** EfficientNetV2B0 (pretrained on ImageNet)
+- **Base:** EfficientNetV2B3 (pretrained on ImageNet)
 - **Custom Head:**
   - `GlobalAveragePooling2D`
-  - `Dropout (rate=0.2)`
+  - `Batchnormalization`
+  - `Dropout (rate=0.3)`
   - `Dense (Softmax activation for 10 classes)`
 - **Training Config:**
   - Optimizer: `Adam (lr=0.0001)`
   - Loss: `SparseCategoricalCrossentropy`
   - Metric: `Accuracy`
   - Epochs: `15`
-  - Early Stopping: `patience=3`, `restore_best_weights=True`
+  - ReduceLROnPlateau: `factor=0.5`, `patience=5`, `min_lr=0.00001`
+  - Early Stopping: `patience=5`, `restore_best_weights=True`
 
 ---
 
 ## 📈 Evaluation Metrics 
 
-- ✅ **Training Accuracy:** 0.9849
-- ✅ **Validation Accuracy:** 0.97
-- ✅ **Test Accuracy:** 0.97
-- ✅ **Test Loss:** 0.1008
+- ✅ **Training Accuracy:** 0.9757
+- ✅ **Validation Accuracy:** 0.9767
+- ✅ **Test Accuracy:** 0.9733
+- ✅ **Test Loss:** 0.0890
 - ✅ **F1 Scores:** 0.97
 
 ---
@@ -87,13 +89,13 @@ A **Gradio** interface allows users to upload an image and get instant predictio
 
 ## 📌 Conclusion
 
-This project demonstrates the power of **Transfer Learning with EfficientNetV2B0** for accurate and efficient e-waste image classification. The model's performance, combined with a user-friendly web interface, offers a promising solution to automate and scale e-waste management processes.
+This project demonstrates the power of **Transfer Learning with EfficientNetV2B3** for accurate and efficient e-waste image classification. The model's performance, combined with a user-friendly web interface, offers a promising solution to automate and scale e-waste management processes.
 
 ---
 
 ## 📈 Future Scope
 
-- Experiment with larger EfficientNet variants (e.g., V2B1/B2)
+- Experiment with custom CNNs, and other models (like MobileNet, XceptionNet etc)
 - Apply advanced hyperparameter tuning for optimization
 - Integrate object detection for localizing e-waste within images
 
