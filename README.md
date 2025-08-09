@@ -108,4 +108,3 @@ This project demonstrates the power of **Transfer Learning with EfficientNetV2B3
 - 🔗 [LinkedIn](https://www.linkedin.com/in/ameya-atreya/)
 
 ---
-
